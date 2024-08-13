@@ -1,2 +1,7 @@
 ipykernel
 python-dotenv
+datasets
+torch
+torchdata
+transformers
+ipywidgets

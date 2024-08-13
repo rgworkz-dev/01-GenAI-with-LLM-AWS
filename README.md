@@ -1,79 +1,66 @@
-# Data Project Template
+# Generative AI Use Case: Summarize Dialogue
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Project%20Template-2856f7" alt="Datalumina Project" />
-</a>
+This repository contains a Jupyter Notebook that demonstrates how to summarize dialogue using generative AI models. The notebook explores prompt engineering techniques to optimize the outputs of Large Language Models (LLMs) by experimenting with zero-shot, one-shot, and few-shot inferences.
 
-## Cookiecutter Data Science
-This project template is a simplified version of the [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org) template, created to suit the needs of Datalumina and made available as a GitHub template.
+## Table of Contents
 
-## Adjusting .gitignore
+1. **Introduction**
+    - Overview of dialogue summarization using generative AI.
+2. **Set up Kernel and Required Dependencies**
+    - Instructions to install necessary packages and dependencies.
+3. **Summarize Dialogue without Prompt Engineering**
+    - Baseline approach to summarizing dialogue without any prompt modifications.
+4. **Summarize Dialogue with an Instruction Prompt**
+    - Techniques to guide the model's output using specific instructions.
+    - Includes zero-shot and template-based inference.
+5. **Summarize Dialogue with One Shot and Few Shot Inference**
+    - Enhancing the model's output by providing one or more examples.
+6. **Generative Configuration Parameters for Inference**
+    - Tuning the parameters for optimal generative performance.
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
+## Getting Started
 
-```plaintext
-# exclude data from source control by default
-# /data/
-```
+### Prerequisites
 
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
+Ensure you have the following installed:
 
-## Duplicating the .env File
-To set up your environment variables, you need to duplicate the `.env.example` file and rename it to `.env`. You can do this manually or using the following terminal command:
+- Python 3.x
+- Jupyter Notebook
+- PyTorch
+- Hugging Face Transformers
+
+### Installation
+
+Clone this repository:
 
 ```bash
-cp .env.example .env # Linux, macOS, Git Bash, WSL
-copy .env.example .env # Windows Command Prompt
+git clone https://github.com/rgworkz-dev/01-GenAI-with-LLM-AWS.git
+cd 01-GenAI-with-LLM-AWS
 ```
 
-This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
+Install the required dependencies:
 
-
-## Project Organization
-
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── README.md          <- The top-level README for developers using this project
-├── data
-│   ├── external       <- Data from third party sources
-│   ├── interim        <- Intermediate data that has been transformed
-│   ├── processed      <- The final, canonical data sets for modeling
-│   └── raw            <- The original, immutable data dump
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-└── src                         <- Source code for this project
-    │
-    ├── __init__.py             <- Makes src a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    │    
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    ├── plots.py                <- Code to create visualizations 
-    │
-    └── services                <- Service classes to connect with external platforms, tools, or APIs
-        └── __init__.py 
+```bash
+pip install -r requirements.txt
 ```
 
---------
+### Running the Notebook
+
+Start Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Open `summarize_dialogue.ipynb` to explore the dialogue summarization use case.
+
+## Contributing
+
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+
+## Acknowledgements
+
+- [Hugging Face Transformers](https://huggingface.co/transformers/)
+- [PyTorch](https://pytorch.org/)
+```
